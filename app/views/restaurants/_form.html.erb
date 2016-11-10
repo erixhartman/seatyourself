@@ -1,0 +1,41 @@
+
+<%= form_for @restaurant do |f| %>
+
+  <% if @restaurant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
+
+      <ul>
+        <% @restaurant.errors.full_messages.each do |msg| %>
+         <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :name, "Input Name: " %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :max_seats, "Input Maximum Number of Seats: " %><br>
+    <%= f.number_field :max_seats %>
+  </p>
+  <p>
+    <%= f.label :location, "Input Restaurant Location: " %><br>
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    <%= f.label :cuisine, "Input Restaurant Cuisine" %><br>
+    <%= f.text_field :cuisine %>
+  </p>
+  <p>
+    <%= f.label :open_time, "What Time Does This Restaurant Open?: " %><br>
+    <%= f.number_field :open_time %>
+  </p>
+  <p>
+    <%= f.label :close_time, "What Time Does This Restaurant Close?: " %><br>
+    <%= f.time_field :close_time %>
+  </p>
+  <%= f.submit %>
+<% end %>
