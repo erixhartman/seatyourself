@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
-  
+
   root 'home#index'
 
-  resources :reservations, only: %i(new index edit destroy show)
+  resources :reservations
 
-  resources :users, only: %i(new index edit destroy show)
+  resources :users
 
-  resources :restaurants, only: %i(new index edit destroy show)
+  resources :restaurants
 
+  resources :log_in, only: [:index, :create, :destroy]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
