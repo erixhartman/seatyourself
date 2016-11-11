@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :ensure_authorized?, only: [:destroy]
   def index
     @users = User.all
   end
@@ -35,11 +36,14 @@ class UsersController < ApplicationController
 end
 
   def destroy
+
+
     @user = User.find(params[:id])
     session[:user_id] = nil
     @user.destroy
     redirect_to root_url
   end
+
 
   private
   def user_params
