@@ -27,9 +27,10 @@ class RestaurantsController < ApplicationController
   def edit
     @restaurant = Restaurant.find(params[:id])
   end
-end
+
 
 private
 def restaurant_params
   params.require(:restaurant).permit(:name, :max_seats, :location, :cuisine, :open_time, :close_time)
+end
 end
