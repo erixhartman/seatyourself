@@ -1,4 +1,7 @@
 class ReviewsController < ApplicationController
+  before_action :load_restaurant
+
+
   def show
     @review = Review.find(params[:id])
   end
