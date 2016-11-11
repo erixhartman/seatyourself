@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
   def index
+    @users = User.all
   end
 
   def show
+    @user = User.find(params[:id])
   end
 
   def new
@@ -20,6 +22,23 @@ class UsersController < ApplicationController
     else
       render "new"
     end
+  end
+
+  def update
+  @user = User.find(params[:id])
+
+  if @user.update_attributes(user_params)
+    redirect_to user_url(@user)
+  else
+    render edit_user_url
+  end
+end
+
+  def destroy
+    @user = User.find(params[:id])
+    session[:user_id] = nil
+    @user.destroy
+    redirect_to root_url
   end
 
   private
