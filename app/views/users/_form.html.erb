@@ -1,37 +1,46 @@
+<br>
+<div class="container container-table">
+  <div class="row vertical-center-row">
+    <div class="col-xs-12">
+      <div class="well">
+        <h1>Add A User</h1>
+        <%= form_for @user do |f| %>
 
-<%= form_for @user do |f| %>
+          <% if @user.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+              <ul>
+                <% @user.errors.full_messages.each do |msg| %>
+                 <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
 
-      <ul>
-        <% @user.errors.full_messages.each do |msg| %>
-         <li><%= msg %></li>
+          <p>
+            <%= f.label :user_name, "Input Name: " %><br>
+            <%= f.text_field :user_name %>
+          </p>
+          <p>
+            <%= f.label :email, "Input Email: " %><br>
+            <%= f.email_field :email %>
+          </p>
+          <p>
+            <%= f.label :phone, "Input Phone Number: " %><br>
+            <%= f.phone_field :phone %>
+          </p>
+          <p>
+            <%= f.label :password, "Input Password: " %><br>
+            <%= f.password_field :password %>
+          </p>
+          <p>
+            <%= f.label :password_confirmation, "Confirm Password: " %><br>
+            <%= f.password_field :password_confirmation %>
+          </p>
+          <%= f.submit %>
         <% end %>
-      </ul>
+      </div>
     </div>
-  <% end %>
-
-  <p>
-    <%= f.label :user_name, "Input Name: " %><br>
-    <%= f.text_field :user_name %>
-  </p>
-  <p>
-    <%= f.label :email, "Input Email: " %><br>
-    <%= f.email_field :email %>
-  </p>
-  <p>
-    <%= f.label :phone, "Input Phone Number: " %><br>
-    <%= f.phone_field :phone %>
-  </p>
-  <p>
-    <%= f.label :password, "Input Password: " %><br>
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.label :password_confirmation, "Confirm Password: " %><br>
-    <%= f.password_field :password_confirmation %>
-  </p>
-  <%= f.submit %>
-<% end %>
+  </div>
+</div>
