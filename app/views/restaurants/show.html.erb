@@ -3,3 +3,46 @@
 
 <h2><%= @restaurant.name %></h2>
 <p><%= @restaurant.location %>, <%= @restaurant.cuisine %> </p>
+
+<h3>Reviews for <%= @restaurant.name %></h3>
+
+<% @restaurant.reviews.each do |review| %>
+  <p>
+    <%= review.comment %>
+    <br>
+    <% if review.user != nil %>
+      <em> by <%= review.user.user_name %></em>
+      Added on: <%= review.created_at %>
+      <% end %>
+  </p>
+<% end %>
+
+ <% if current_user %>
+  <h4>New Review</h4>
+
+  <%= form_for([@restaurant, @review]) do |f| %>
+    <% if @review.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved</h2>
+        <ul>
+          <% @review.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :rating, "Rate #{@restaurant.name} on a scale of 1-5" %><br>
+      <%= f.number_field :rating %>
+    </div>
+    <div class="field">
+      <%= f.label :comment, "Please explain your rating for #{@restaurant.name}" %><br>
+      <%= f.text_area :comment %>
+    </div>
+  <div class="actions"> <%= f.submit %> </div>
+  <% end %>
+
+  <% else %>
+    <p>Please <%= link_to "log in", log_in_index_path %> to add a review</p>
+<% end %>
