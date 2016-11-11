@@ -4,6 +4,13 @@
 <h2><%= @restaurant.name %></h2>
 <p><%= @restaurant.location %>, <%= @restaurant.cuisine %> </p>
 
+<h3>Make a Reservation</h3>
+<% if current_user %>
+<%= link_to "Make a Reservation at #{@restaurant.name}", new_restaurant_reservation_url(@restaurant) %>
+<% else %>
+  <p>Please <%= link_to "Log In", log_in_index_path %> to make a reservation</p>
+<% end %>
+
 <h3>Reviews for <%= @restaurant.name %></h3>
 
 <% @restaurant.reviews.each do |review| %>
@@ -44,5 +51,5 @@
   <% end %>
 
   <% else %>
-    <p>Please <%= link_to "log in", log_in_index_path %> to add a review</p>
+    <p>Please <%= link_to "Log In", log_in_index_path %> to add a review</p>
 <% end %>
