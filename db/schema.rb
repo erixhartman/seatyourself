@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20161111184938) do
 
   create_table "ratings", force: :cascade do |t|
@@ -21,6 +22,9 @@ ActiveRecord::Schema.define(version: 20161111184938) do
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_ratings_on_user_id"
   end
+=======
+ActiveRecord::Schema.define(version: 20161111183025) do
+>>>>>>> 642611b4afb119b7431b12267f62d9dacb3440a6
 
   create_table "reservations", force: :cascade do |t|
     t.integer  "user_id"
@@ -43,6 +47,15 @@ ActiveRecord::Schema.define(version: 20161111184938) do
     t.integer  "owner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text     "comment"
+    t.integer  "rating"
+    t.integer  "restaurant_id"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "users", force: :cascade do |t|
