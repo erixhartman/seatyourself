@@ -23,20 +23,19 @@
             <li><a href="http://localhost:3000/users/new">Sign Up</a></li>
             <li><a href="http://localhost:3000/log_in">Log In</a></li>
           <% end %>
+            <li>
+              <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="button" class="btn btn-primary btn-sm outline">Search</button>
+              </form>
+            </li>
         </ul>
       </div>
     </nav>
   </div>
   <!--end of nav bar -->
-
-  <p class="userinfo">
-    <% if current_user %>
-      Signed in as <%= current_user.user_name %>. <%= link_to "Log out", log_in_path("current"), :method => :delete %>
-    <% else %>
-      <p><%= link_to "Log In",  log_in_index_url %> | <%= link_to "Sign Up", new_user_url %></p>
-    <% end %>
-
-  </p>
 
 <%= yield %>
 
