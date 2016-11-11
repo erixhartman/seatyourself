@@ -24,6 +24,22 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+  @user = User.find(params[:id])
+
+  if @user.update_attributes(user_params)
+    redirect_to user_url(@user)
+  else
+    render edit_user_url
+  end
+end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to root_url
+  end
+
   private
   def user_params
     params.require(:user).permit(:user_name, :email, :password, :password_confirmation, :phone)

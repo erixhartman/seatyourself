@@ -1,1 +1,4 @@
 <h1><%= "#{@user.user_name}" %></h1>
+<p><%= link_to 'Edit Account', edit_user_url %> | <%= link_to "Delete Account", @user, method: :delete, data: {confirm: "Are you sure you want to delete your account?"}  %></p>
+<p><%= "Email: #{@user.email}" %></p>
+<p><%= "Phone: #{@user.phone}" %></p>
