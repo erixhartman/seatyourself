@@ -50,6 +50,28 @@
   <div class="actions"> <%= f.submit %> </div>
   <% end %>
 
-  <% else %>
-    <p>Please <%= link_to "Log In", log_in_index_path %> to add a review</p>
+    <% else %>
+      <p>Please <%= link_to "Log In", log_in_index_path %> to add a review</p>
+    <% end %>
+
+
+
+
+<h3>Pictures from <%= @restaurant.name %></h3>
+
+<% @restaurant.pictures.each do |picture| %>
+  <img src="<%= picture.url %>">
+    <%= picture.description %>
+    <br>
+    <% if picture.user != nil %>
+      <em> by <%= picture.user.user_name %></em>
+      Added on: <%= picture.created_at %>
+      <% end %>
+  </p>
 <% end %>
+
+  <% if current_user %>
+  <%= link_to "Add a Picture at #{@restaurant.name}", new_restaurant_picture_url(@restaurant) %>
+  <% else %>
+    <p>Please <%= link_to "Log In", log_in_index_path %> to add a picture </p>
+  <% end %>
