@@ -41,7 +41,16 @@
 
     <div class="field">
       <%= f.label :rating, "Rate #{@restaurant.name} on a scale of 1-5" %><br>
-      <%= f.number_field :rating %>
+      <%= f.radio_button(:rating, 1 ) %>
+      <%= f.label(:rating_1, "1") %>
+      <%= f.radio_button(:rating, 2 ) %>
+      <%= f.label(:rating_2, "2") %>
+      <%= f.radio_button(:rating, 3 ) %>
+      <%= f.label(:rating_3, "3") %>
+      <%= f.radio_button(:rating, 4 ) %>
+      <%= f.label(:rating_4, "4") %>
+      <%= f.radio_button(:rating, 5 ) %>
+      <%= f.label(:rating_5, "5") %>
     </div>
     <div class="field">
       <%= f.label :comment, "Please explain your rating for #{@restaurant.name}" %><br>
