@@ -8,4 +8,7 @@ class User < ApplicationRecord
   def admin?
      admin
   end
+
+  validates :user_name, :email, :phone, :password, :password_confirmation, presence: true
+
 end
