@@ -6,8 +6,8 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.reservatoin_confirm.subject
   #
 
-  default from: "from@example.com"
-  def reservatoin_confirm(user)
+  default from: "evan.shabsove@gmail.com"
+  def reservation_confirm(user)
     @greeting = "Hi"
     @user = user
 

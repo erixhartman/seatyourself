@@ -19,7 +19,7 @@ class ReservationsController < ApplicationController
 
     if @reservation.save
       #send email
-      UserMailer.reservatoin_confirm(current_user).deliver
+      UserMailer.reservation_confirm(current_user).deliver
       redirect_to root_url, notice: "Reservation made successfully!"
     else
       render 'restaurants/show'
