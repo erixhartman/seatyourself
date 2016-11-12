@@ -20,7 +20,7 @@ class ReservationsController < ApplicationController
     if @reservation.save
       redirect_to root_url, notice: "Reservation made successfully!"
     else
-      render 'restaurants/show'
+      render :new
     end
   end
 

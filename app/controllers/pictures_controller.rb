@@ -16,7 +16,7 @@ class PicturesController < ApplicationController
     if @picture.save
       redirect_to restaurants_url, notice: "Picture posted successfully!"
     else
-      render 'restaurants/show'
+      render :new
     end
   end
 
