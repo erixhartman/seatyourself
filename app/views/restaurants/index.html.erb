@@ -3,5 +3,5 @@
 
 <% @restaurants.each do |restaurant| %>
   <h2><%= link_to "#{restaurant.name}", restaurant %></h2>
-  <p><%= restaurant.location %>, <%= restaurant.cuisine %> </p>
+  <p><%= restaurant.location.capitalize %>, <%= restaurant.cuisine.capitalize %> </p>
 <% end %>
