@@ -12,6 +12,6 @@ class UserMailer < ApplicationMailer
     @user = user
 
     #mail to: @user.email to email to user just testing with my email
-    mail(to: "evan.shabsove@gmail.com", subject: "Reservation Confirmation")
+    mail(to: @user.email, subject: "Reservation Confirmation")
   end
 end
