@@ -46,7 +46,7 @@ hr.feature-divider {
   margin-bottom: 38px;
 }
 
-.log-in-btn {
+.sign-in-btn {
   background-color: #f0ad4e;
   border-color: #eea236;
   border-radius: 6px;
@@ -61,4 +61,8 @@ hr.feature-divider {
   height: 30px;
   width: 200px;
   border-color: #F5F5F5;
+}
+
+input.form-control {
+  width: 25%;
 }
