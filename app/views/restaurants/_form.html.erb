@@ -14,28 +14,39 @@
   <% end %>
 
   <p>
-    <%= f.label :name, "Input Name: " %><br>
+    <%= f.label :name, "What is the Name of your restaurant? " %><br>
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :max_seats, "Input Maximum Number of Seats: " %><br>
+    <%= f.label :max_seats, "What is the maximum number of seats in your restaurant? " %><br>
     <%= f.number_field :max_seats %>
   </p>
   <p>
-    <%= f.label :location, "Input Restaurant Location: " %><br>
-    <%= f.text_field :location %>
+    <%= f.label :location, "Where is your restaurant located? " %><br>
+    <%= f.radio_button(:location, "toronto") %>
+    <%= f.label(:location_toronto, "Toronto") %>
+    <%= f.radio_button(:location, "vancouver") %>
+    <%= f.label(:location_vancouver, "Vancouver")%>
+
   </p>
   <p>
-    <%= f.label :cuisine, "Input Restaurant Cuisine" %><br>
-    <%= f.text_field :cuisine %>
+    <%= f.label :cuisine, "What type of food does your restaurant serve? " %><br>
+    <%= f.radio_button(:cuisine, "burgers") %>
+    <%= f.label(:cuisine_burgers, "Burgers") %>
+    <%= f.radio_button(:cuisine, "pizza") %>
+    <%= f.label(:cuisine_pizza, "Pizza") %>
+    <%= f.radio_button(:cuisine, "chinese") %>
+    <%= f.label(:cuisine_chinese, "Chinese") %>
   </p>
   <p>
     <%= f.label :open_time, "What Time Does This Restaurant Open?: " %><br>
-    <%= f.number_field :open_time %>
+    <%= f.time_field :open_time %>
   </p>
   <p>
     <%= f.label :close_time, "What Time Does This Restaurant Close?: " %><br>
     <%= f.time_field :close_time %>
   </p>
+
+
   <%= f.submit %>
 <% end %>
