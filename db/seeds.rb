@@ -12,6 +12,7 @@ location: "toronto",
 cuisine: "burgers",
 open_time: 11,
 close_time: 23,
+price: 1,
 )
 
 Restaurant.create(
@@ -21,6 +22,7 @@ location: "toronto",
 cuisine: "burgers",
 open_time: 11,
 close_time: 23,
+price: 2,
 )
 
 Restaurant.create(
@@ -30,6 +32,7 @@ location: "toronto",
 cuisine: "pizza",
 open_time: 16,
 close_time: 23,
+price: 3,
 )
 
 Restaurant.create(
@@ -39,6 +42,7 @@ location: "toronto",
 cuisine: "pizza",
 open_time: 10,
 close_time: 20,
+price: 4,
 )
 
 Restaurant.create(
@@ -48,6 +52,7 @@ location: "toronto",
 cuisine: "pizza",
 open_time: 11,
 close_time: 23,
+price: 1,
 )
 
 Restaurant.create(
@@ -57,6 +62,7 @@ location: "toronto",
 cuisine: "chinese",
 open_time: 5,
 close_time: 23,
+price: 2,
 )
 
 Restaurant.create(
@@ -66,6 +72,7 @@ location: "toronto",
 cuisine: "chinese",
 open_time: 6,
 close_time: 22,
+price: 3,
 )
 
 Restaurant.create(
@@ -75,6 +82,7 @@ location: "vancouver",
 cuisine: "burgers",
 open_time: 11,
 close_time: 23,
+price: 4,
 )
 
 Restaurant.create(
@@ -84,6 +92,7 @@ location: "vancouver",
 cuisine: "burgers",
 open_time: 11,
 close_time: 23,
+price: 1,
 )
 
 Restaurant.create(
@@ -93,6 +102,7 @@ location: "vancouver",
 cuisine: "pizza",
 open_time: 16,
 close_time: 23,
+price: 2,
 )
 
 Restaurant.create(
@@ -102,6 +112,7 @@ location: "vancouver",
 cuisine: "pizza",
 open_time: 10,
 close_time: 20,
+price: 3,
 )
 
 Restaurant.create(
@@ -111,6 +122,7 @@ location: "vancouver",
 cuisine: "pizza",
 open_time: 11,
 close_time: 23,
+price: 4,
 )
 
 Restaurant.create(
@@ -120,6 +132,7 @@ location: "vancouver",
 cuisine: "chinese",
 open_time: 5,
 close_time: 23,
+price: 1,
 )
 
 Restaurant.create(
@@ -129,6 +142,7 @@ location: "vancouver",
 cuisine: "chinese",
 open_time: 6,
 close_time: 22,
+price: 2,
 )
 
 User.create(
