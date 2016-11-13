@@ -79,7 +79,12 @@ html, body {
 
 // start of main content styling
 
-.restaurant-box {
+div.restaurant-box {
   border-top: 1px solid #2A2C24;
   border-bottom: 1px solid #2A2C24;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  height: 15%;
 }

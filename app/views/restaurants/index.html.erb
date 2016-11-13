@@ -9,12 +9,6 @@
       <li><a href="#"><span class="glyphicon glyphicon-bitcoin" aria-hidden="true"></span>  Price</a></li>
       <li><a href="#"><span></span></a></li>
     </ul>
-    <div class="social-btn">
-      <a href="#"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
-      <a href="#"><i class="fa fa-github-alt fa-3x" aria-hidden="true"></i></a>
-      <a href="#"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
-      <a href="#"><i class="fa fa-camera-retro fa-3x" aria-hidden="true"></i></a>
-    </div>
   </div>
   <!--end sidebar-->
   <%= link_to "New Restaurant", new_restaurant_path %>
@@ -27,17 +21,17 @@
       <%= submit_tag "Search", :name => nil %>
     </p>
   <% end %>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12">
-        <% @found_restaurants.each do |restaurant| %>
-          <div class="restaurant-box">
-            <img src="<% restaurant.pictures.first.url %>" alt="" />
-            <h2><%= link_to "#{restaurant.name}", restaurant %></h2>
-            <p><%= restaurant.location.capitalize %>, <%= restaurant.cuisine.capitalize %> </p>
-          </div>
-        <% end %>
+  <% @restaurants.each do |restaurant| %>
+    <div class="container-fluid">
+      <div class="row restaurant-box">
+        <div class="col-xs-3">
+          <img src="<%= restaurant.pictures.first.url %>" alt="" class="img-responsive"/>
+        </div>
+        <div class="col-xs-9">
+          <h2><%= link_to "#{restaurant.name}", restaurant %></h2>
+          <p><%= restaurant.location.capitalize %>, <%= restaurant.cuisine.capitalize %> </p>
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>
 </div>
