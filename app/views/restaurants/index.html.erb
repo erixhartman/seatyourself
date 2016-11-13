@@ -1,7 +1,16 @@
 <h1>Restaurants</h1>
 <%= link_to "New Restaurant", new_restaurant_path %>
 
-<% @restaurants.each do |restaurant| %>
-  <h2><%= link_to "#{restaurant.name}", restaurant %></h2>
-  <p><%= restaurant.location.capitalize %>, <%= restaurant.cuisine.capitalize %> </p>
+
+<%= form_tag restaurants_path, :method => 'get' do %>
+  <br>
+  <p> Search Restaurants by Name:
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+<% @found_restaurants.each do |restaurant| %>
+<h2><%= link_to "#{restaurant.name}", restaurant %></h2>
+<p><%= restaurant.location.capitalize %>, <%= restaurant.cuisine.capitalize %> </p>
 <% end %>
