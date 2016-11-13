@@ -11,6 +11,16 @@
     <%= text_field_tag :location, params[:location] %></p>
   <p>Cuisine:
     <%= text_field_tag :cuisine, params[:cuisine] %></p>
+  <p>Price Range:
+    <%= radio_button_tag(:price, 1, params[:price]) %>
+    <%= label_tag(:price, "$") %>
+    <%= radio_button_tag(:price, 2, params[:price]) %>
+    <%= label_tag(:price, "$$") %>
+    <%= radio_button_tag(:price, 3, params[:price]) %>
+    <%= label_tag(:price, "$$$") %>
+    <%= radio_button_tag(:price, 4, params[:price]) %>
+    <%= label_tag(:price, "$$$$") %>
+  </p>
     <%= submit_tag "Search", :name => nil %>
 <% end %>
 

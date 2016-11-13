@@ -8,9 +8,9 @@ class Restaurant < ApplicationRecord
   validates :name, :location, :cuisine, :open_time, :close_time, :price, presence: true
   validates :max_seats, numericality: {only_integer: true}
 
-  def self.search(search, location, cuisine)
+  def self.search(search, location, cuisine, price)
     if search
-        @found_restaurants = Restaurant.where('name LIKE ? AND location LIKE ? AND cuisine like ?',  "%#{search}%", "%#{location}%", "%#{cuisine}%")
+        @found_restaurants = Restaurant.where('name LIKE ? AND location LIKE ? AND cuisine LIKE ? AND price = ?',  "%#{search}%", "%#{location}%", "%#{cuisine}%", price)
     else
         @found_restaurants = Restaurant.all
     end
