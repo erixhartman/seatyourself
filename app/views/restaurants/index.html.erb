@@ -4,10 +4,14 @@
 
 <%= form_tag restaurants_path, :method => 'get' do %>
   <br>
-  <p> Search Restaurants by Name:
-    <%= text_field_tag :search, params[:search] %>
+  <p>Search Restaurants</p>
+  <p>Name:
+    <%= text_field_tag :search, params[:search] %> </p>
+  <p>Location:
+    <%= text_field_tag :location, params[:location] %></p>
+  <p>Cuisine:
+    <%= text_field_tag :cuisine, params[:cuisine] %></p>
     <%= submit_tag "Search", :name => nil %>
-  </p>
 <% end %>
 
 <% @found_restaurants.each do |restaurant| %>
