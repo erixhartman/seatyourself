@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
   def index
-    @restaurants = Restaurant.search(params[:search])
-    @found_restaurants = Restaurant.search(params[:search])
+    @restaurants = Restaurant.all
+    @found_restaurants = Restaurant.search(params[:search], params[:location], params[:cuisine], params[:price])
   end
 
   def show
