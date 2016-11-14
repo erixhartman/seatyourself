@@ -35,14 +35,7 @@
     <%= submit_tag "Search", :name => nil %>
 <% end %>
 
-  <%= form_tag restaurants_path, :method => 'get' do %>
-    <br>
-    <p> Search Restaurants by Name:
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", :name => nil %>
-    </p>
-  <% end %>
-  <% @restaurants.each do |restaurant| %>
+  <% @found_restaurants.each do |restaurant| %>
     <div class="container-fluid">
       <div class="row restaurant-box">
         <div class="col-xs-3">
