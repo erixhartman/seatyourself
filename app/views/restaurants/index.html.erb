@@ -39,7 +39,11 @@
     <div class="container-fluid">
       <div class="row restaurant-box">
         <div class="col-xs-3">
-          <img src="<%= restaurant.pictures.first.url %>" alt="" class="img-responsive"/>
+          <% if restaurant.pictures.first.present? %>
+            <img src="<%= restaurant.pictures.first.url %>" alt="" class="img-responsive"/>
+          <% else %>
+            <img src="https://placekitten.com/200/200" alt="" class="img-responsive"/>
+          <% end %>
         </div>
         <div class="col-xs-9">
           <h2><%= link_to "#{restaurant.name}", restaurant %></h2>
