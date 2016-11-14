@@ -11,8 +11,9 @@ div.jumbotron {
     padding-bottom: 150px;
 }
 
-.navbar {
+nav.navbar {
   margin-bottom: 0 !important;
+  z-index: 1;
 }
 
 div.jumbotron_text {
