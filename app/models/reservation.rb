@@ -16,12 +16,12 @@ class Reservation < ApplicationRecord
 
 
  def available_capacity
-   restaurant.max_seats - restaurant.reservations.sum(:seats)
+   restaurant.max_seats - self.reservations_now.sum(:seats)
  end
- #
- # def reservations_at(time)
- #   self.reservations.where(time: time.beginning_of_hour..time.end_of_hour)
- # end
+
+ def reservations_now
+   self.restaurant.reservations.where(time: self.time..(self.time+1)).where(date: self.date)
+ end
 
 
 end
