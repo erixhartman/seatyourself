@@ -9,18 +9,19 @@
         </ul>
       </div>
     <% end %>
-
+      <div class="form-group">
         <%= f.label :seats, "How many people are in your party? " %><br>
-        <%= f.number_field :seats %>
+        <%= f.number_field :seats, :class => "form-control" %>
       </p>
 
       <p>
         <%= f.label :date, "What day would you like a reservation for? " %><br>
-        <%= f.date_field :date %>
+        <%= f.date_field :date, :class => "form-control" %>
       </p>
       <p>
         <%= f.label :time, "What time is this reservation for? " %><br>
-        <%= f.time_field :time %>
+        <%= f.time_field :time, :class => "form-control" %>
       </p>
-      <%= f.submit %>
+      <%= f.submit 'Submit', :class => "submit-button" %>
+    </div>
   <% end %>
