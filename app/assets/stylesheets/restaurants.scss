@@ -98,3 +98,37 @@ hr.feature-divider {
 .review {
   padding-top: 25px;
 }
+//
+// Centering new/edit page
+.container-table {
+  display: table;
+  height: 90%;
+  background-color: transparent;
+}
+
+.vertical-center-row {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+hr.feature-divider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid #BFB5AF;
+}
+
+p.field-title {
+  font-size: 15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.submit-button {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+  border-radius: 6px;
+  border: 1px solid;
+  padding: 10px 19px;
+  width: 180px;
+  text-align: center;
+}
