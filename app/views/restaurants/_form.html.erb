@@ -23,20 +23,32 @@
     </p>
     <p class="field-title">
       <%= f.label :location, "Where is your restaurant located? " %><br>
-      <%= f.radio_button(:location, "toronto") %>
-      <%= f.label(:location_toronto, "Toronto") %>
+      <%= f.radio_button(:location, "edmonton") %>
+      <%= f.label(:location_edmonton, "Edmonton") %>
+      <%= f.radio_button(:location, "montreal") %>
+      <%= f.label(:location_montreal, "Montreal")%>
+      <%= f.radio_button(:location, "ottawa") %>
+      <%= f.label(:location_ottawa, "Ottawa") %>
+      <%= f.radio_button(:location, "vancouver") %>
+      <%= f.label(:location_vancouver, "Vancouver")%>
       <%= f.radio_button(:location, "vancouver") %>
       <%= f.label(:location_vancouver, "Vancouver")%>
 
     </p>
     <p class="field-title">
       <%= f.label :cuisine, "What type of food does your restaurant serve? " %><br>
-      <%= f.radio_button(:cuisine, "burgers") %>
-      <%= f.label(:cuisine_burgers, "Burgers") %>
+      <%= f.radio_button(:cuisine, "sandwich") %>
+      <%= f.label(:cuisine_sandwich, "Sandwiches") %>
       <%= f.radio_button(:cuisine, "pizza") %>
       <%= f.label(:cuisine_pizza, "Pizza") %>
       <%= f.radio_button(:cuisine, "chinese") %>
       <%= f.label(:cuisine_chinese, "Chinese") %>
+      <%= f.radio_button(:cuisine, "sushi") %>
+      <%= f.label(:cuisine_sushi, "Sushi") %>
+      <%= f.radio_button(:cuisine, "steak") %>
+      <%= f.label(:cuisine_steak, "Steak") %>
+      <%= f.radio_button(:cuisine, "cafe") %>
+      <%= f.label(:cuisine_cafe, "Cafe") %>
     </p>
 
     <p class="field-title">
