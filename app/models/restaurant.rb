@@ -16,6 +16,13 @@ class Restaurant < ApplicationRecord
     end
   end
 
+  def self.search_sans_price(search, location, cuisine)
+    if search
+        @found_restaurants = Restaurant.where('name LIKE ? AND location LIKE ? AND cuisine LIKE ?',  "%#{search}%", "%#{location}%", "%#{cuisine}%")
+    else
+        @found_restaurants = Restaurant.all
+    end
+  end
 
 
 end
