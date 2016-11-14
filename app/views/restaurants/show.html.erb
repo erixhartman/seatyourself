@@ -62,18 +62,18 @@
   <div class="row review">
     <div class="col-xs-6">
 
-     <div class="field">
+     <div class="rating">
        <%= f.label :rating, "Rate #{@restaurant.name} on a scale of 1-5", class: 'score-label' %><br>
-       <%= f.radio_button(:rating, 1 ) %>
-       <%= f.label(:rating_1, "1") %>
-       <%= f.radio_button(:rating, 2 ) %>
-       <%= f.label(:rating_2, "2") %>
-       <%= f.radio_button(:rating, 3 ) %>
-       <%= f.label(:rating_3, "3") %>
+       <%= f.radio_button(:rating, 5) %>
+       <%= f.label(:rating_5, "5") %>
        <%= f.radio_button(:rating, 4 ) %>
        <%= f.label(:rating_4, "4") %>
-       <%= f.radio_button(:rating, 5 ) %>
-       <%= f.label(:rating_5, "5") %>
+       <%= f.radio_button(:rating, 3 ) %>
+       <%= f.label(:rating_3, "3") %>
+       <%= f.radio_button(:rating, 2 ) %>
+       <%= f.label(:rating_2, "2") %>
+       <%= f.radio_button(:rating, 1 ) %>
+       <%= f.label(:rating_1, "1") %>
      </div>
      <div class="actions"> <%= f.submit %> </div>
    </div>
@@ -110,7 +110,6 @@
         <% else %>
           <p>Please <%= link_to "Log In", log_in_index_path %> to add a picture </p>
         <% end %>
-
     </div>
   </div>
 </div>
