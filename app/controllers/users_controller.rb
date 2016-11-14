@@ -37,7 +37,6 @@ end
 
   def destroy
 
-
     @user = User.find(params[:id])
     session[:user_id] = nil
     @user.destroy
