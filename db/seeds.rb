@@ -142,7 +142,7 @@ description: "N/A",
 )
 
 Restaurant.create(
-name: "Fickle Pickle",
+name: "The Crafty Pickle",
 max_seats: 95,
 location: "vancouver",
 cuisine: "dinner",
@@ -457,7 +457,7 @@ description: "N/A",
 )
 
 Restaurant.create(
-name: "Pizza Gigi",
+name: "Domino's Pizza",
 max_seats: 35,
 location: "ottawa",
 cuisine: "pizza",
@@ -502,7 +502,7 @@ description: "N/A",
 )
 
 Restaurant.create(
-name: "New Sky",
+name: "McDonald's",
 max_seats: 60,
 location: "ottawa",
 cuisine: "dinner",
@@ -517,10 +517,10 @@ description: "N/A",
 )
 
 Restaurant.create(
-name: "Rol San",
+name: "Maki Sushi",
 max_seats: 40,
 location: "ottawa",
-cuisine: "dinner",
+cuisine: "sushi",
 open_time: "2000-01-01 09:00:00",
 close_time: "2000-01-01 20:30:00",
 score: 4,
@@ -529,6 +529,251 @@ created_at: "2016-11-13 22:59:59",
 updated_at: "2016-11-13 23:59:59",
 price: 3,
 description: "N/A",
+)
+
+Picture.create(
+url: "https://pbs.twimg.com/profile_images/585158051860099072/r7HGubdx.jpg",
+description: "Pizza Pizza",
+restaurant_id: 1,
+user_id: 1,
+)
+
+Picture.create(
+url: "http://www.logopeople.in/img/logo/babu-logo-design-norway.jpg",
+description: "Babu",
+restaurant_id: 2,
+user_id: 2,
+)
+
+Picture.create(
+url: "http://www.thesuburbanmom.com/wp-content/uploads/2014/09/Beef-Check-Logo1.jpg",
+description: "Beef Easy",
+restaurant_id: 3,
+user_id: 3,
+)
+
+Picture.create(
+url: "https://pbs.twimg.com/profile_images/669958936150282240/iLRrIezi_400x400.jpg",
+description: "Bakehouse",
+restaurant_id: 4,
+user_id: 4,
+)
+
+Picture.create(
+url: "http://kingsway.mallmaverick.com/system/stores/store_fronts/000/009/274/original/bostonpizza.jpg?1452740285",
+description: "Boston Pizza",
+restaurant_id: 5,
+user_id: 1,
+)
+
+Picture.create(
+url: "https://m1.behance.net/rendition/modules/59428681/disp/0d03418537090ebe9943a6e738d22c86.png",
+description: "India 360",
+restaurant_id: 6,
+user_id: 2,
+)
+
+Picture.create(
+url: "http://3.bp.blogspot.com/-lyNJJ0WycEs/TmY3yCvyikI/AAAAAAAAq-c/BpJs-JHuqWw/s1600/Pizza-Nova-Logo.jpg",
+description: "Pizza Nova",
+restaurant_id: 7,
+user_id: 3,
+)
+
+Picture.create(
+url: "https://www.kegsteakhouse.com/themes/keg/images/fb-share-gen.jpg",
+description: "The Keg",
+restaurant_id: 8,
+user_id: 4,
+)
+
+Picture.create(
+url: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/Harvey's_logo.svg/1024px-Harvey's_logo.svg.png",
+description: "Harvey’s",
+restaurant_id: 9,
+user_id: 1,
+)
+
+Picture.create(
+url: "https://thecraftypickledotcom.files.wordpress.com/2015/08/the-crafty-pickle_logo-2.png",
+description: "The Crafty Pickle",
+restaurant_id: 10,
+user_id: 2,
+)
+
+Picture.create(
+url: "https://pbs.twimg.com/profile_images/1981494990/Frankie_Tower_-_Original.jpg",
+description: "Frankie Tomato’s",
+restaurant_id: 11,
+user_id: 3,
+)
+
+Picture.create(
+url: "http://caseyshead.com/wp-content/uploads/2014/03/logo-fire-ice-logo.jpg",
+description: "Fire and Ice",
+restaurant_id: 12,
+user_id: 4,
+)
+
+Picture.create(
+url: "https://www.hangoversamui.com/images/restaurants/1472371273_1.jpg",
+description: "Sushi Hut",
+restaurant_id: 13,
+user_id: 1,
+)
+
+Picture.create(
+url: "https://s-media-cache-ak0.pinimg.com/564x/2c/4e/be/2c4ebe03171546e6676e578e7931242a.jpg",
+description: "Play",
+restaurant_id: 14,
+user_id: 2,
+)
+
+Picture.create(
+url: "http://www.timhortons.com/us/imagesgeneral2010/tim-hortons-CafeBakeShopLogo.jpg",
+description: "Tim Horton’s",
+restaurant_id: 15,
+user_id: 3,
+)
+
+Picture.create(
+url: "http://vignette3.wikia.nocookie.net/logopedia/images/b/be/Wendy's_Shorthand_Logo.png/revision/latest?cb=20120801060239",
+description: "Wendy’s",
+restaurant_id: 16,
+user_id: 4,
+)
+
+Picture.create(
+url: "http://www.logodesignlove.com/images/wordmarks/subway-logo-02.jpg",
+description: "Subway",
+restaurant_id: 17,
+user_id: 1,
+)
+
+Picture.create(
+url: "http://www.just-eat.ca/blog/wp-content/uploads/2011/11/mrsub-840x444.png",
+description: "Mr. Sub",
+restaurant_id: 18,
+user_id: 2,
+)
+
+Picture.create(
+url: "http://cdn.schaeffersresearch.com/images/default-source/schaeffers-cdn-images/default-images/logos/chipotle.jpg?sfvrsn=2",
+description: "Chipotle Mexican Grill",
+restaurant_id: 19,
+user_id: 3,
+)
+
+Picture.create(
+url: "https://qph.ec.quoracdn.net/main-qimg-42a047420a707f34a6c6bf703766e528-c?convert_to_webp=true",
+description: "Starbucks",
+restaurant_id: 20,
+user_id: 4,
+)
+
+Picture.create(
+url: "http://dinehere.ca/sites/default/files/imagecache/restaurant_detail_full/sites/default/files/r_images/163390.png",
+description: "Swiss Chalet",
+restaurant_id: 21,
+user_id: 1,
+)
+
+Picture.create(
+url: "http://retouch.ca/wp-content/galleriesclients/Hero%20Burgers.jpg",
+description: "Hero Burger",
+restaurant_id: 22,
+user_id: 2,
+)
+
+Picture.create(
+url: "http://kingsway.mallmaverick.com/system/stores/store_fronts/000/009/377/original/Moxies_Logo.jpg?1452740357",
+description: "Moxie’s",
+restaurant_id: 23,
+user_id: 3,
+)
+
+Picture.create(
+url: "http://logos-vector.com/images/logo/xxl/1/0/7/107081/Jack_Astor_s_Bar_and_Grill_d16fa_450x450.png",
+description: "Jackasters",
+restaurant_id: 24,
+user_id: 4,
+)
+
+Picture.create(
+url: "http://www.karacters.com/cms/lib/uploads/milestones_bp_01.jpg",
+description: "Milestones",
+restaurant_id: 25,
+user_id: 1,
+)
+
+Picture.create(
+url: "http://www.tloma.com/images/default-source/businesspartners/cn-tower-logo.jpg?sfvrsn=2",
+description: "CN Tower 360",
+restaurant_id: 26,
+user_id: 2,
+)
+
+Picture.create(
+url: "https://media-cdn.tripadvisor.com/media/photo-s/06/0d/55/d5/mandarin-chinese-restaurant.jpg",
+description: "Mandarin",
+restaurant_id: 27,
+user_id: 3,
+)
+
+Picture.create(
+url: "https://www.mallmaverick.com/system/stores/store_fronts/000/022/611/original/mrgreek.png?1452747366",
+description: "Mr. Greek",
+restaurant_id: 28,
+user_id: 4,
+)
+
+Picture.create(
+url: "http://darlingasusual.weebly.com/uploads/1/7/9/1/17915857/4048897_orig.jpg",
+description: "Burger's Priest",
+restaurant_id: 29,
+user_id: 1,
+)
+
+Picture.create(
+url: "http://cdn.smosh.com/sites/default/files/2014/09/holy-chuck-cow-logo.jpg",
+description: "Holy Chuck",
+restaurant_id: 30,
+user_id: 2,
+)
+
+Picture.create(
+url: "http://diylogodesigns.com/blog/wp-content/uploads/2016/05/Dominos-Pizza-Logo-PNG-2016-download-new.png",
+description: "Domino's Pizza",
+restaurant_id: 31,
+user_id: 3,
+)
+
+Picture.create(
+url: "http://littleitalycollegest.com/wp-content/uploads/bulk/image6.jpg",
+description: "Bitondos",
+restaurant_id: 32,
+user_id: 4,
+)
+
+Picture.create(
+url: "http://jordangc.com/wp-content/uploads/2014/07/north-of-brooklyn-pizzeria.jpg",
+description: "North of Brooklyn",
+restaurant_id: 33,
+user_id: 1,
+)
+
+Picture.create(
+url: "https://pbs.twimg.com/profile_images/524645913701019648/B5I7rChO.jpeg",
+description: "McDonald's",
+restaurant_id: 34,
+user_id: 2,
+)
+
+Picture.create(
+url: "https://pbs.twimg.com/profile_images/1884159162/LOGO_Maki_Sushi.JPG",
+description: "Maki Sushi",
+restaurant_id: 35,
+user_id: 3,
 )
 
 User.create(
