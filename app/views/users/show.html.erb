@@ -4,3 +4,13 @@
 <% end %>
 <p><%= "Email: #{@user.email}" %></p>
 <p><%= "Phone: #{@user.phone}" %></p>
+
+<h1>Reservations for <%= @user.user_name %></h1>
+<p>
+  These are my reservations
+</p>
+<% @user.reservations.each do |reservation| %>
+  <h4>Reservation for: <%= reservation.seats %> at <%= reservation.restaurant.name %></h4>
+  <h5>At: <%= reservation.time %>, on <%= reservation.date %></h5>
+  </p>
+<% end %>

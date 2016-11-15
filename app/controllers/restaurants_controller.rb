@@ -1,7 +1,11 @@
 class RestaurantsController < ApplicationController
   def index
     @restaurants = Restaurant.all
+    if params[:price]
     @found_restaurants = Restaurant.search(params[:search], params[:location], params[:cuisine], params[:price])
+    else
+    @found_restaurants = Restaurant.search_sans_price(params[:search], params[:location], params[:cuisine])
+    end
   end
 
   def show
