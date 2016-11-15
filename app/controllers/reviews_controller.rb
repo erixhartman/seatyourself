@@ -11,10 +11,10 @@ class ReviewsController < ApplicationController
     @review.user = current_user
 
     if @review.save
-      render 'restaurants#show', notice: "Review posted successfully!"
+      render 'restaurants/show', notice: "Review posted successfully!"
     else
 
-      render 'restaurants#show'
+      render 'restaurants/show'
     end
   end
 
