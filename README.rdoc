@@ -1,28 +1,23 @@
 == README ==
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+SeatYourself was a project by Evan Shabsove, Jacob Philpott, Luke Plourde, and
+Eric Hartman for their immersive web development course at Bitmaker Labs in
+Toronto, Canada.
 
-Things you may want to cover:
+Upon assignment, the team had only recently learned Rails and were told to
+create their own version of OpenTable, an online restaurant reservation service,
+over the span of 5 days.
 
-* Ruby version
+The team carefully planned and prioritized what features SeatYourself would
+contain. Features central toward the reservation process for both a customer
+and a restaurant were prioritized. As a result of this process, SeatYourself
+allows a user to create a profile, log in, create a restaurant, make a
+reservation, cancel a reservation, and see their reservations. A restaurant can
+accept as many reservations at a given time as their listed seats available.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Once these core elements were in place features were added, which allowed a
+restaurant to provide a description, and to list their cuisine, location, and
+price. Users are able to search for restaurants using any combination of these
+factors. A review system was implemented which allowed users to leave a text
+based review, and a star rating for any restaurant. Finally, email confirmation
+was implemented to inform a customer that their reservation had been made.
