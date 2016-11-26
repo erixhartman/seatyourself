@@ -1,4 +1,4 @@
-== README ==
+== README
 
 SeatYourself was a project by Evan Shabsove, Jacob Philpott, Luke Plourde, and
 Eric Hartman for their immersive web development course at Bitmaker Labs in
