@@ -13,15 +13,15 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="http://localhost:3000">Seats Table</a>
+          <a class="navbar-brand" href="/">Seats Table</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
             <li><a href="#">Hi <%= current_user.user_name %></a></li>
             <li><a href="/log_in/current" data-method="delete">Log out</a></li>
           <% else %>
-            <li><a href="http://localhost:3000/users/new">Sign Up</a></li>
-            <li><a href="http://localhost:3000/log_in">Log In</a></li>
+            <li><a href="<%=new_user_path%>">Sign Up</a></li>
+            <li><a href="<%=log_in_index_path%>">Log In</a></li>
           <% end %>
             <li>
               <form class="navbar-form navbar-left" role="search">
